@@ -33,5 +33,5 @@ public:
 	void save(); ///save calendar into outfile
 	void restore(); ///overwrite calendar with input file
 	void merge();/// merge current calculator with saved calendar
-	void CalendarInterface::edit();
+	void edit(); // edit event
 };
