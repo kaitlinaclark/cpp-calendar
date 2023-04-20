@@ -2,7 +2,6 @@
 Author: Jon Shidal
 Purpose: Define builder classes, responsible for building and managing the structure of the calendar
 */
-#include "stdafx.h"
 #include <iostream>
 #include <sstream>
 #include "calendarbuilder.h"

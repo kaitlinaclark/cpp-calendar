@@ -2,8 +2,6 @@
 Author: Jon Shidal
 Purpose: Define Calendar component classes.
 */
-
-#include "stdafx.h"
 #include "calendarcomponents.h"
 #include "calendarbuilder.h"
 #include <iostream>

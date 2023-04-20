@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "CalendarInterface.h"
 #include <iostream>
 #include <sstream>

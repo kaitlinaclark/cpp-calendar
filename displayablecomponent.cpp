@@ -3,7 +3,6 @@ Author: Jon Shidal
 Purpose: Definition of DisplayableComponent class. Defines the implementation that is 
 inherited by all concrete classes deriving from it.
 */
-#include "stdafx.h"
 #include <iostream>
 #include "displayablecomponent.h"
 
