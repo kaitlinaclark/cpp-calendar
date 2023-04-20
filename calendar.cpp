@@ -2,13 +2,14 @@
 
 #include "stdafx.h"
 #include "CalendarInterface.h"
+#include "CalendarInterface.cpp"
 #include <iostream>
 using namespace std;
 
 int main()
 {
 	CalendarInterface c("full", 1);
-	c.display();
+	//c.display();
 	return 0;
 }
 

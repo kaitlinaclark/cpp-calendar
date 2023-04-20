@@ -13,14 +13,15 @@ using namespace std;
 
 
 class CalendarInterface {
+	// Member variables - protected (default)
 	shared_ptr<Calendar> cal; // the calendar
 	shared_ptr<Calendar> restoreCal; // the calendar
 	shared_ptr<CalendarBuilder> builder; // builder for managing construction of the calendar
 	shared_ptr<CalendarBuilder> restoreBuilder; // builder for managing construction of the calendar we are loading in
 	shared_ptr<DisplayableComponent> currentDisplay; // which component the user is currently viewing
-public:
-	// constructor
-	// arguments: 1 - what type of builder? 2 - how many years to hold? 
+public: // access specifier
+	// Constructor
+		// arguments: 1 - what type of builder? 2 - how many years to hold? 
 	CalendarInterface(string builderType, size_t years);
 	
 	// calendar traversal functions

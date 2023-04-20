@@ -8,8 +8,8 @@
 using namespace std;
 unsigned int displayOption = 0;
 
-CalendarInterface(string builderType, size_t years) 
-	: builder(nullptr),cal(nullptr),currentDisplay(nullptr) {
+CalendarInterface::CalendarInterface(string builderType, size_t years) 
+	: builder(nullptr), cal(nullptr), currentDisplay(nullptr) { // initialize member variables
 	if (builderType == "full") {
 		builder = make_shared<FullCalendarBuilder>();
 		string in;
@@ -20,8 +20,7 @@ CalendarInterface(string builderType, size_t years)
 	}
 }
 
-void display() {
-	
+void CalendarInterface::display() {
 	currentDisplay->display(displayOption);
 	//Change the Calendar’s current view
 	cout << "zoom out: out, zoom in: in, quit: q" << endl;
@@ -75,7 +74,7 @@ void display() {
 	return;
 }
 
-void zoomIn(unsigned int index) {
+void CalendarInterface::zoomIn(unsigned int index) {
 	shared_ptr<DisplayableComponent> temp = currentDisplay->getChild(index);
 	if (temp != nullptr) {
 		currentDisplay = temp;
@@ -84,7 +83,7 @@ void zoomIn(unsigned int index) {
 	display();
 }
 
-void zoomOut() {
+void CalendarInterface::zoomOut() {
 	if (currentDisplay->getParent().lock() != nullptr) {
 		currentDisplay = currentDisplay->getParent().lock();
 		displayOption--;
@@ -93,7 +92,7 @@ void zoomOut() {
 }
 
 ///Adding the Event function
-void addEvent() {
+void CalendarInterface::addEvent() {
 	std::string name;
 	std::string in;
 	int time;

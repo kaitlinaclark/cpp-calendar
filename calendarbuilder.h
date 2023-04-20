@@ -1,13 +1,12 @@
+#pragma once
 /*
-Author: Jon Shidal
 Purpose: declare abstract base class to represent a builder for the calendar. Declare FullCalendarBuilder
 which builds all components of the calendar at once.
 */
-#pragma once
 #include "displayablecomponent.h"
 #include "calendarcomponents.h"
-#include<ctime>
-#include<memory>
+#include <ctime>
+#include <memory>
 
 class Calendar;
 
