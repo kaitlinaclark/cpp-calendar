@@ -1,4 +1,7 @@
 #include "CalendarInterface.h"
+#include "calendarcomponents.cpp"
+#include "displayablecomponent.cpp"
+#include "calendarbuilder.cpp"
 #include <iostream>
 #include <sstream>
 #include <fstream>

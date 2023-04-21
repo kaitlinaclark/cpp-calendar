@@ -16,8 +16,8 @@ class CalendarInterface {
 	// Member variables - protected (default)
 	shared_ptr<Calendar> cal; // the calendar
 	shared_ptr<Calendar> restoreCal; // the calendar
-	shared_ptr<CalendarBuilder> builder; // builder for managing construction of the calendar
-	shared_ptr<CalendarBuilder> restoreBuilder; // builder for managing construction of the calendar we are loading in
+	shared_ptr<FullCalendarBuilder> builder; // builder for managing construction of the calendar
+	shared_ptr<FullCalendarBuilder> restoreBuilder; // builder for managing construction of the calendar we are loading in
 	shared_ptr<DisplayableComponent> currentDisplay; // which component the user is currently viewing
 public: // access specifier
 	// Constructor
