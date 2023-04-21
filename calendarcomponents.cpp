@@ -493,8 +493,7 @@ shared_ptr<DisplayableComponent> DisplayableYear::addComponent(shared_ptr<Displa
 Calendar::Calendar(string n, size_t y)
 	: CalendarComponent(tm(), nullptr), name(n), yearsToHold(y), events({}) { // just initialize with a default tm for now.
 	time_t now = time(0); // get the current time
-	tm now_tm;
-	gmtime_s(&now_tm, &now); // create a struct tm(now_tm) from the current time
+	tm now_tm = *localtime(&now); // create a struct tm(now_tm) from the current time
 	currentDate = now_tm;    // set Calendar's date and time to now
 	dateInfo = now_tm; // setup dateInfo to represent January 1st of the current year, start time of the calendar
 	dateInfo.tm_sec = 0;
